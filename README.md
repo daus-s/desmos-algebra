@@ -4,7 +4,6 @@
 ### Daus Carmichael
 
 #### [Paper](https://github.com/daus-s/desmos-algebra/project.pdf)
-The link to the paper I wrote for this project is her [Paper](https://github.com/daus-s/desmos-algebra/project.pdf)
 #### Requirements
 
 Linux System
