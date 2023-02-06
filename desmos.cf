@@ -1,0 +1,101 @@
+------------------------------------------------------------------
+-- Desmos syntax grammar------------------------------------------
+------------------------------------------------------------------
+
+------------
+--Equation--
+------------
+
+Equal.    Exp1 ::= Exp1 "=" Exp2 ;
+
+-------------
+--Operators--
+-------------
+
+Plus.     Exp2 ::= Exp2 "+" Exp3 ;
+Minus.    Exp2 ::= Exp2 "-" Exp3 ;
+Times.    Exp3 ::= Exp3 "\\cdot" Exp4 ;
+Negate.   Exp3 ::= "-" Exp4;
+Fact.     Exp3 ::= Exp4 "!" ;
+Div.      Exp3 ::= "\\frac{" Exp3 "}{" Exp4 "}";
+Exp.      Exp4 ::= Exp4 "^{" Exp5 "}" ;
+Sqrt.     Exp4 ::= "\\sqrt{" Exp5 "}";
+NRt.      Exp4 ::= "\\sqrt[" Exp6 "]{" Exp5 "}";
+
+----------------
+--Functions   --
+--sin cos tan --
+----------------
+
+Sin.      Exp5 ::= "\\sin\\left(" Exp6 "\\right)" ;
+Cos.      Exp5 ::= "\\cos\\left(" Exp6 "\\right)" ;
+Tan.      Exp5 ::= "\\tan\\left(" Exp6 "\\right)" ;
+
+-------------------------
+--Inverse Trig Function--
+-------------------------
+
+ASin.     Exp5 ::= "\\sin^{-1}\\left(" Exp6 "\\right)" ;
+ACos.     Exp5 ::= "\\cos^{-1}\\left(" Exp6 "\\right)" ;
+ATan.     Exp5 ::= "\\tan^{-1}\\left(" Exp6 "\\right)" ;
+
+-------------------------
+--Logarithmic Functions--
+-------------------------
+
+Ln.       Exp5 ::= "\\ln" Exp6 ;
+Log.      Exp5 ::= "\\log" Exp6 ;
+
+--------------------------
+--operatorname Functions--
+--------------------------
+
+Mean.     Exp6 ::= "\\operatorname{mean}\\left(" Exp7 "\\right)";
+Stdev.    Exp6 ::= "\\operatorname{stdev}\\left(" Exp7 "\\right)";
+StdevP.   Exp6 ::= "\\operatorname{stdevp}\\left(" Exp7 "\\right)";
+NPR.      Exp6 ::= "\\operatorname{nPr}\\left(" Exp7 "\\right)";
+NCR.      Exp6 ::= "\\operatorname{nCr}\\left(" Exp7 "\\right)";
+Round.    Exp6 ::= "\\operatorname{round}\\left(" Exp7 "\\right)";
+Percent.  Exp6 ::= Exp7 "\\%\\operatorname{of}" Exp8 ;
+
+---------------------------
+--Absolute Value function--
+---------------------------
+
+Abs.      Exp7 ::= "\\left|" Exp8 "\\right|";
+
+--------------------------------------
+--List operators and list definition--
+--------------------------------------
+
+Elems.    Exp8 ::= Exp8 "," Exp9 ;
+List.     Exp8 ::= "[" Exp8 "]" ; 
+Index.    Exp8 ::= Exp8 "[" Exp9 "]" ;
+
+
+----------
+--Values--
+----------
+E.        Exp9 ::= "e" ;
+Pi.       Exp9 ::= "\\pi" ;
+Int.      Exp9 ::= Integer ; 
+Dbl.      Exp9 ::= Double ;
+Var.      Exp10 ::= Id ;  
+
+
+
+
+--------------------------------------
+--BOILER PLATE FOR TOKEN RECOGNITION--
+--------------------------------------
+
+coercions Exp 11 ;
+
+token Id ( letter );
+--token Id (letter ( '_{' (letter | digit)* '}'| ' ' )  ) ; 
+--we cannot support \phi and \theta yet as well as subscripts
+
+
+comment "//" ;
+comment "/*" "*/" ;
+---test file takes care of this

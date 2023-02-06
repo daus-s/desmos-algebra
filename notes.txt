@@ -1,0 +1,85 @@
+cd grammar
+bnfc -m --haskell LambdaNat1.cf
+make
+cd ..
+cp grammar/*.hs src
+cabal build
+
+
+cabal run LambdaNat-exe test/LambdaNat2.lc
+
+
+java ARS cacccababaaacacababcbabaabcabcbbccabaac
+
+
+cacccababaaacacababcbabaabcabcbbccabaac
+cacccababaaacacababcbabaabcabcbbccabaac
+
+
+c=a^{2}+b^{2}
+
+\sin\theta
+
+0
+-1
+8
+5.2
+-4.0
+1234567890
+
+
+a+b
+
+a_{0}
+a_0
+a-b
+
+a\cdot b
+
+\frac{a}{b}
+
+
+a^{b}
+
+\sqrt{x}
+
+\left(a\right)
+
+\left\{1\right\}
+
+
+x^{2}
+
+
+
+
+
+
+
+
+
+
+
+\operatorname{nPr}\left(\right)
+
+\sin\left(\right)
+\sin^{-1}\left(\right)
+
+
+\operatorname{mean}\left(\right)
+\operatorname{mean}\left(1,2,a\right)
+
+\left|x\right|
+\sqrt[]{}
+e
+\pi
+\phi
+\theta 
+\%\operatorname{of}
+\operatorname{ans}
+
+
+\ln x
+\log 100
+
+\ln a+b

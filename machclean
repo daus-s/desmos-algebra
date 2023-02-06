@@ -1,0 +1,16 @@
+cd test/
+rm *.pdb
+rm *.exe
+cd ..
+rm *.o
+rm *.hi
+rm *.y
+rm *.bak
+rm Makefile
+rm AbsDesmos.*
+rm ErrM.*
+rm LexDesmos.*
+rm ParDesmos.*
+rm PrintDesmos.*
+rm SkelDesmos.*
+rm TestDesmos.*

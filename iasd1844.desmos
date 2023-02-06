@@ -1,0 +1,1 @@
+Equal (Int 3) (Plus (Int 1) (Times (Int 2) (Var (Id "x"))))

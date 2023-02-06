@@ -1,0 +1,10 @@
+#take the argument passed into the program
+echo $1 | ./TestDesmos > iasd1844.desmos
+#this should override the previous content in iasd1844.desmos
+java EditFile
+TOKEN=`./rewrite `
+echo $TOKEN
+LINES=`echo $TOKEN | wc -l`
+if [[$LINES == 1]];
+    
+fi

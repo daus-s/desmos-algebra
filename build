@@ -1,0 +1,4 @@
+bnfc -m --haskell desmos.cf
+make
+javac EditFile.java
+rustc rewrite.rs
