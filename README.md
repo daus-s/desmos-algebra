@@ -3,7 +3,7 @@
 
 ### Daus Carmichael
 
-#### [Paper](https://github.com/daus-s/desmos-algebra/project.pdf)
+#### [Paper](https://github.com/daus-s/desmos-algebra/blob/main/project.pdf)
 #### Requirements
 
 Linux System
