@@ -1,8 +1,7 @@
-cd test/
-rm *.pdb
-rm *.exe
-cd ..
 rm *.o
+rm rewrite
+rm rewrite.pdb
+rm rewrite.exe
 rm *.hi
 rm *.y
 rm *.bak
